@@ -1,3 +1,8 @@
-import PyNaver
+################ API Keys ################
+import os
+from dotenv import load_dotenv
 
-PyNaver.NaverCloudPlatform
+load_dotenv()
+client_id = os.getenv("CLIENT_ID")
+client_secret = os.getenv("CLIENT_SECRET")
+##########################################
