@@ -1,0 +1,3 @@
+import PyNaver
+
+PyNaver.NaverCloudPlatform
