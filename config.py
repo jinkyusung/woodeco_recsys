@@ -7,5 +7,6 @@ CATEGORY_GROUP_CODE = {
     '카페':'CE7'
 }
 
+# Seoul API
 URL = 'http://openapi.seoul.go.kr:8088'
 LOCATION_CODE_TABLE = './location_code_table.xlsx'
