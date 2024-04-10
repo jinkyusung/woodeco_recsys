@@ -4,6 +4,9 @@ from pprint import pprint
 from PyKakao import Local
 import config as C
 
+import sys
+sys.dont_write_bytecode = True
+
 ################ API Keys ################
 import os
 from dotenv import load_dotenv
