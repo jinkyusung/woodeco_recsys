@@ -1,6 +1,5 @@
 import sys
 import requests
-import numpy as np
 import pandas as pd
 from typing import Tuple
 
@@ -43,8 +42,11 @@ def get_current_coordinates(local, keyword: str, dataframe: bool = True) -> Tupl
 
 def get_respones_from_search_category(group_code, page, roi, key):
     url = 'https://dapi.kakao.com/v2/local/search/category.json'
-    params = {'category_group_code':group_code, 'page': page, 
-                 'rect': f"{','.join(map(str, roi))}"}
+    params = {
+        'category_group_code':group_code, 
+        'page': page, 
+        'rect': f"{','.join(map(str, roi))}"
+    }
     headers = {"Authorization": "KakaoAK "+ key}
     return requests.get(url, params=params, headers=headers)
 
@@ -79,6 +81,7 @@ def search_in_patch(group_code, roi, key=REST_API):
             res += search_in_patch(group_code, subroi2, key=REST_API)
             res += search_in_patch(group_code, subroi3, key=REST_API)
             res += search_in_patch(group_code, subroi4, key=REST_API)
+
             return res
         
         else:
