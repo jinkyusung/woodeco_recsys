@@ -22,6 +22,7 @@ load_dotenv()
 REST_API = os.getenv("REST_API")
 ##########################################
 
+
 def get_current_coordinates(local, keyword: str, dataframe: bool = True) -> Tuple[float, float]:
     """
     Develope을 위한 테스트 함수
@@ -40,7 +41,7 @@ def get_current_coordinates(local, keyword: str, dataframe: bool = True) -> Tupl
     return float(x), float(y)
 
 
-def get_group_code_api(group_code, page, roi, key):
+def get_respones_from_search_category(group_code, page, roi, key):
     url = 'https://dapi.kakao.com/v2/local/search/category.json'
     params = {'category_group_code':group_code, 'page': page, 
                  'rect': f"{','.join(map(str, roi))}"}
@@ -53,7 +54,7 @@ def search_in_patch(group_code, roi, key=REST_API):
     page = 1
     
     while True:
-        respones = get_group_code_api(group_code, page, roi, key)
+        respones = get_respones_from_search_category(group_code, page, roi, key)
         
         _json = respones.json()
         is_end = _json['meta']['is_end']
@@ -85,7 +86,7 @@ def search_in_patch(group_code, roi, key=REST_API):
             res += _json['documents']
 
 
-def get_roi(curr_x: float, curr_y: float, distance: float):
+def get_roi(curr_x: float, curr_y: float, distance: float) -> Tuple[float, float, float, float]:
     """
     curr_x   : RoI 중심점의 경도 값
     curr_y   : RoI 중심점의 위도 값
