@@ -12,10 +12,10 @@ URL = 'http://openapi.seoul.go.kr:8088'
 LOCATION_CODE_TABLE = './location_code_table.xlsx'
 
 # Embeddings Model Routes
-EMBEDDING_CACHE = './models/embedding_cache.pkl'
 MODEL_NAME = "word2vec-google-news-300"
-MODEL = './models/' + MODEL_NAME + '.model'
+MODEL = './model/' + MODEL_NAME + '.model'
+SCORE_CACHE = './model/score_cache.pkl'
 
 # Embeddings Results
-PLACES_WITH_TAGS = './data/tags.csv'
-EMBEDDING = './data/embeddings.csv'
+PLACE_WITH_TAG = './data/place_with_tag.csv'
+PLACE_WITH_PREFERENCE = './data/place_with_preference.csv'

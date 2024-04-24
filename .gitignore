@@ -1,6 +1,5 @@
 __pycache__/
 .env
-*.csv
 .DS_Store
-models/*.model
-models/*.npy
+model/*.model
+model/*.npy
