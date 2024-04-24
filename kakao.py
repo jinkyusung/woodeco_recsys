@@ -142,7 +142,7 @@ def make_map(curr_x, curr_y, df):
 if __name__ == '__main__':
     LOCAL = Local(service_key=REST_API)
     curr_x, curr_y = get_current_coordinates(LOCAL, '신당')
-    df = place_search_by_category(curr_x, curr_y, category='음식점', distance=0.8, key=REST_API)
+    df = place_search_by_category(curr_x, curr_y, category='음식점', distance=0.7, key=REST_API)
     print(df.shape)
     df.to_csv('./data/foods.csv', index=False)
 

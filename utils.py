@@ -19,3 +19,19 @@ def timer(func):
         print(f"Function '{func.__name__}' executed in {et-st:.4f} seconds")
         return result
     return wrapper
+
+
+def load_pickle(filename):
+    try:
+        with open(filename, 'rb') as file:
+            import pickle
+            data = pickle.load(file)
+    except FileNotFoundError:
+        data = {}
+    return data
+
+
+def save_pickle(data, filename):
+    with open(filename, 'wb') as file:
+        import pickle
+        pickle.dump(data, file)
