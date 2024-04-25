@@ -1,7 +1,7 @@
 # Woodeco RecSys
 
 **Remarks**  
-* Files which has a prefix `_` in its name are python scipts for some experiments of paper.
+* Files with the prefix `_` in their names are python scripts for some thesis experiments.
 * This python program encapsulates API secrets by using `.env` files. So, you _should configure it **yourself**_.
-* Since Google Translation API and OpenAI API takes elapsed time and money, We use cache data.  
-It is worth to implement because almost data for a calculation of API are duplicated!
+* The Papago Translate API and OpenAI API are time-consuming and expensive, so this program uses cached data to minimize API calls.
+This is beneficial because the data for API calculations is largely redundant.
