@@ -45,3 +45,19 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 # )
 
 # utils.save_pickle(completion, "./_result/nonoptimal_path_issue.pkl")
+
+
+# content_with_distance = \
+# """Please make a date course within walking distance of Sinchon.
+# Be sure to include the specific store name. 
+# Consider that a date is going to start at 5PM and Minimize inefficient overall movement of generated course.
+# Return message type must be json."""
+
+# completion = client.chat.completions.create(
+#   model="gpt-4-turbo",
+#   messages=[
+#     {"role": "system", "content": "You are an assistant who creates a specific dating course based on the given conditions."},
+#     {"role": "user", "content": content_with_distance}
+#   ],
+#   response_format={"type": "json_object"}
+# )

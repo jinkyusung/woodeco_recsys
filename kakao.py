@@ -141,10 +141,28 @@ def make_map(curr_x, curr_y, df):
 
 if __name__ == '__main__':
     LOCAL = Local(service_key=REST_API)
-    curr_x, curr_y = get_current_coordinates(LOCAL, '신당')
-    df = place_search_by_category(curr_x, curr_y, category='음식점', distance=0.7, key=REST_API)
-    print(df.shape)
-    df.to_csv('./data/foods.csv', index=False)
+    curr_x, curr_y = get_current_coordinates(LOCAL, '신촌역 2호선')
+    
+    food = place_search_by_category(curr_x, curr_y, category='음식점', distance=0.8, key=REST_API)
+    food.to_csv(C.RAW_FOOD, index=False)
+    print(food.shape)
+    m = make_map(curr_x, curr_y, food)
+    m.save(C.RAW_FOOD.split('.')[0] + '.html')
 
-    m = make_map(curr_x, curr_y, df)
-    m.save('./data/place_search.html')
+    cafe = place_search_by_category(curr_x, curr_y, category='카페', distance=0.8, key=REST_API)
+    cafe.to_csv(C.RAW_CAFE, index=False)
+    print(cafe.shape)
+    m = make_map(curr_x, curr_y, cafe)
+    m.save(C.RAW_CAFE.split('.')[0] + '.html')
+
+    culture = place_search_by_category(curr_x, curr_y, category='문화시설', distance=0.8, key=REST_API)
+    culture.to_csv(C.RAW_CULTURE, index=False)
+    print(culture.shape)
+    m = make_map(curr_x, curr_y, culture)
+    m.save(C.RAW_CULTURE.split('.')[0] + '.html')
+
+    landmark = place_search_by_category(curr_x, curr_y, category='관광명소', distance=0.8, key=REST_API)
+    landmark.to_csv(C.RAW_LANDMARK, index=False)
+    print(landmark.shape)
+    m = make_map(curr_x, curr_y, landmark)
+    m.save(C.RAW_LANDMARK.split('.')[0] + '.html')

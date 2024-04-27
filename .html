@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ec229d87645eaf03c2331a536ef31eb6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ec229d87645eaf03c2331a536ef31eb6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ec229d87645eaf03c2331a536ef31eb6 = L.map(
+                "map_ec229d87645eaf03c2331a536ef31eb6",
+                {
+                    center: [37.555198169366435, 126.93698075993808],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 16,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2c0a810a76ad5fed2d47af31942e657f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_2c0a810a76ad5fed2d47af31942e657f.addTo(map_ec229d87645eaf03c2331a536ef31eb6);
+        
+    
+            var tile_layer_cc7cd88b76b778f7284d38e39f1e22b3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_49dab8152344e2367da8e4442346ee75 = new L.Control.MiniMap(
+                tile_layer_cc7cd88b76b778f7284d38e39f1e22b3,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_ec229d87645eaf03c2331a536ef31eb6.addControl(mini_map_49dab8152344e2367da8e4442346ee75);
+        
+    
+            var marker_f158eb4cf222e0f8532b5523620a0fa7 = L.marker(
+                [37.5573914161758, 126.939115681116],
+                {}
+            ).addTo(map_ec229d87645eaf03c2331a536ef31eb6);
+        
+    
+        var popup_1293625efb22a20e2ccd7baba32000fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53d0c86671202db3309cf904f4c12c68 = $(`<div id="html_53d0c86671202db3309cf904f4c12c68" style="width: 100.0%; height: 100.0%;">http://place.map.kakao.com/12576867</div>`)[0];
+                popup_1293625efb22a20e2ccd7baba32000fc.setContent(html_53d0c86671202db3309cf904f4c12c68);
+            
+        
+
+        marker_f158eb4cf222e0f8532b5523620a0fa7.bindPopup(popup_1293625efb22a20e2ccd7baba32000fc)
+        ;
+
+        
+    
+    
+            marker_f158eb4cf222e0f8532b5523620a0fa7.bindTooltip(
+                `<div>
+                     신촌이대거리
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4c5014148900e7b848f2885817e92b38 = L.marker(
+                [37.5575884731824, 126.936901786879],
+                {}
+            ).addTo(map_ec229d87645eaf03c2331a536ef31eb6);
+        
+    
+        var popup_6df1e7a778800f752893a284ed7c1462 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_06e5339731ecf7c528226b35ea9cb22d = $(`<div id="html_06e5339731ecf7c528226b35ea9cb22d" style="width: 100.0%; height: 100.0%;">http://place.map.kakao.com/7998456</div>`)[0];
+                popup_6df1e7a778800f752893a284ed7c1462.setContent(html_06e5339731ecf7c528226b35ea9cb22d);
+            
+        
+
+        marker_4c5014148900e7b848f2885817e92b38.bindPopup(popup_6df1e7a778800f752893a284ed7c1462)
+        ;
+
+        
+    
+    
+            marker_4c5014148900e7b848f2885817e92b38.bindTooltip(
+                `<div>
+                     연세로
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dd3d483e3b25123935982488ec58ea91 = L.marker(
+                [37.5557360489237, 126.936950881804],
+                {}
+            ).addTo(map_ec229d87645eaf03c2331a536ef31eb6);
+        
+    
+        var popup_f9937b036a79b8c8ed193cb83aec46a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a9eef83a42e1792175f352f243a172c2 = $(`<div id="html_a9eef83a42e1792175f352f243a172c2" style="width: 100.0%; height: 100.0%;">http://place.map.kakao.com/2011201584</div>`)[0];
+                popup_f9937b036a79b8c8ed193cb83aec46a1.setContent(html_a9eef83a42e1792175f352f243a172c2);
+            
+        
+
+        marker_dd3d483e3b25123935982488ec58ea91.bindPopup(popup_f9937b036a79b8c8ed193cb83aec46a1)
+        ;
+
+        
+    
+    
+            marker_dd3d483e3b25123935982488ec58ea91.bindTooltip(
+                `<div>
+                     신촌피아노거리
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_09a56daf2f2214cde318f071009f45bd = L.marker(
+                [37.555198169366435, 126.93698075993808],
+                {}
+            ).addTo(map_ec229d87645eaf03c2331a536ef31eb6);
+        
+    
+            var icon_7e4cb43629cc50d501e7df16e8ac49f2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_09a56daf2f2214cde318f071009f45bd.setIcon(icon_7e4cb43629cc50d501e7df16e8ac49f2);
+        
+    
+        var popup_e1833437b63db5f510d2b7051e62513a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b03b473d6cb10b9b23077713a45165ac = $(`<div id="html_b03b473d6cb10b9b23077713a45165ac" style="width: 100.0%; height: 100.0%;">You</div>`)[0];
+                popup_e1833437b63db5f510d2b7051e62513a.setContent(html_b03b473d6cb10b9b23077713a45165ac);
+            
+        
+
+        marker_09a56daf2f2214cde318f071009f45bd.bindPopup(popup_e1833437b63db5f510d2b7051e62513a)
+        ;
+
+        
+    
+    
+            marker_09a56daf2f2214cde318f071009f45bd.bindTooltip(
+                `<div>
+                     You
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

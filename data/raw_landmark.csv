@@ -1,0 +1,4 @@
+address_name,category_group_code,category_group_name,category_name,distance,id,phone,place_name,place_url,road_address_name,x,y
+서울 서대문구 창천동,AT4,관광명소,"여행 > 관광,명소 > 테마거리 > 먹자골목",,12576867,,신촌이대거리,http://place.map.kakao.com/12576867,,126.939115681116,37.5573914161758
+서울 서대문구 창천동,AT4,관광명소,"여행 > 관광,명소 > 테마거리",,7998456,,연세로,http://place.map.kakao.com/7998456,,126.936901786879,37.5575884731824
+서울 서대문구 창천동 30-16,AT4,관광명소,"여행 > 관광,명소 > 테마거리",,2011201584,,신촌피아노거리,http://place.map.kakao.com/2011201584,,126.936950881804,37.5557360489237
