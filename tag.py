@@ -15,8 +15,24 @@ naver_client_id = os.getenv('NAVER_CLIENT_ID')
 naver_client_secret = os.getenv('NAVER_CLIENT_SECRET')
 openai_api_key = os.getenv('OPENAI_API_KEY')
 
-# categories = ['cafe', 'culture', 'food', 'landmark']
-categories = ['food', 'landmark']
+categories = ['cafe', 'culture', 'food', 'landmark']
+# categories = ['food', 'landmark']
+
+'''
+# 아래 prompt가 더 좋을 수 있음 
+
+def get_prompt_for_category(category, description):
+    prompts = {
+        'cafe': f"Generate unique hashtags in English capturing the special ambiance, community vibe, or any unique offerings of the cafe described as: {description}. Ignore descriptions that do not fit these characteristics. Encourage creative tags like #word: #cozy, #vintageDecor, #jazz, #petFriendly, #brunch.",
+        'culture': f"Generate distinctive hashtags in English that highlight the cultural significance, unique exhibits, or the atmosphere of the venue described as: {description}. Ignore descriptions that do not fit these characteristics. Think of tags like #word: #modernart, #heritageSite, #interactiveArt, #movie, #theater.",
+        'food': f"Generate appealing hashtags in English that describe the dining experience, unique flavors, or the atmosphere of the restaurant as described in: {description}. Ignore descriptions that do not fit these characteristics. Use imaginative tags #word: such as #fusionFlavors, #famous, #waiting, #highball, #chicDecor.",
+        'landmark': f"Generate impactful hashtags in English that convey the historical importance, architectural uniqueness, or the experience of visiting the landmark detailed in: {description}. Ignore descriptions that do not fit these characteristics. Tags could include #word: #timeCapsule, #panoramicViews, #busking, #music."
+    }
+    return prompts[category]
+
+# naver_search도 여러개의 query를 사용해 반환 받은 description을 사용하는 게 더 좋은 태그 생성에 도움이 될 수 있음음
+'''
+
 
 def get_prompt_for_category(category, description):
     # Define prompts for each category incorporating the provided description
@@ -133,5 +149,6 @@ def process_places(input_file, output_file, naver_client_id, naver_client_secret
 if __name__ == '__main__':
     for category in categories:
         input_file = f'./data/raw_{category}.csv'
-        output_file = f'./data/results_{category}.csv'
+        # output_file = f'./data/results_{category}.csv'
+        output_file = f'./data/experiments_{category}.csv'
         process_places(input_file, output_file, naver_client_id, naver_client_secret, openai_api_key, category)
